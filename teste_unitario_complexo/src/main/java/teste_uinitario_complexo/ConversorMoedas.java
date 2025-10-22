@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ConversorMoedas {
-    private final Map<String, Double< taxas = new HashMap<>();
+    private final Map<String, Double> taxas = new HashMap<>();
 
     public ConversorMoedas() {
         taxas.put("USD_BRL", 5.0);
@@ -13,6 +13,8 @@ public class ConversorMoedas {
     public double converter(String de, String para, double valor) {
         if (valor < 0) throw new IllegalArgumentExepition("Valor não pode ser negativo");
         String chave = de + "_" + para;
-        if 
+        if (!taxas.containsKey(chave))
+            throw new IllegalArgumentException("conversão não suportada");
+        return valor * taxas.get(chave);
     }
 }

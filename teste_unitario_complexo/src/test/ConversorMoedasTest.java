@@ -1,4 +1,4 @@
-package teste_unitario_complexo;
+import teste_uinitario_complexo.ConversorMoedas;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
