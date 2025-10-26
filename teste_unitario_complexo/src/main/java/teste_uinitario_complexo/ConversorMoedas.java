@@ -1,4 +1,5 @@
 package teste_uinitario_complexo;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,10 +12,13 @@ public class ConversorMoedas {
     }
 
     public double converter(String de, String para, double valor) {
-        if (valor < 0) throw new IllegalArgumentExepition("Valor não pode ser negativo");
+        if (valor < 0)
+            throw new IllegalArgumentException("Valor não pode ser negativo");
+        
         String chave = de + "_" + para;
         if (!taxas.containsKey(chave))
-            throw new IllegalArgumentException("conversão não suportada");
+            throw new IllegalArgumentException("Conversão não suportada");
+        
         return valor * taxas.get(chave);
     }
 }
