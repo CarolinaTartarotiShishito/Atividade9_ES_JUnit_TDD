@@ -1,4 +1,4 @@
-package teste_uinitario_complexo;
+package conversao;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +11,7 @@ public class ConversorMoedas {
         taxas.put("EUR_BRL", 6.0);
     }
 
-    public double converter(String de, String para, double valor) {
+    public double converter(String de, String para, double valor){
         if (valor < 0)
             throw new IllegalArgumentException("Valor não pode ser negativo");
         

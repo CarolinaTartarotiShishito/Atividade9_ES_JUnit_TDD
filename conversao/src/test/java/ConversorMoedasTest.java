@@ -1,10 +1,8 @@
-package teste_uinitario_complexo;
-
+import conversao.ConversorMoedas;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ConversorMoedasTest {
-
     @Test
     void testeConversaoValida() {
         ConversorMoedas conv = new ConversorMoedas();
